@@ -57,17 +57,17 @@ export function ProjectsSection() {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative overflow-hidden rounded-2xl backdrop-blur-xl bg-card/30 border border-cyan-500/20 transition-all duration-300 hover:border-cyan-500/50 hover:shadow-[0_0_40px_rgba(6,182,212,0.2)]"
+              className="group/project relative overflow-hidden rounded-2xl backdrop-blur-xl bg-card/30 border border-cyan-500/20 transition-all duration-300 hover:border-cyan-500/50 hover:shadow-[0_0_40px_rgba(6,182,212,0.2)]"
             >
               {/* Glowing Border Effect on Hover */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/0 via-cyan-500/10 to-purple-500/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/0 via-cyan-500/10 to-purple-500/0 opacity-0 transition-opacity duration-300 group-hover/project:opacity-100" />
               
               <div className="relative aspect-video overflow-hidden bg-muted">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-500 group-hover/project:scale-105"
                 />
                 {/* Image Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
@@ -75,11 +75,12 @@ export function ProjectsSection() {
               
               <div className="relative p-6">
                 {/* Corner Accents */}
-                <div className="absolute top-0 right-0 w-12 h-12 border-r-2 border-t-2 border-purple-500/30 rounded-tr-lg opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute top-0 right-0 w-8 h-8 border-r-2 border-t-2 border-purple-500/30 rounded-tr-lg transition-all duration-300 group-hover/project:w-12 group-hover/project:h-12 group-hover/project:border-purple-400/60" />
+                <div className="absolute bottom-0 left-0 w-8 h-8 border-l-2 border-b-2 border-cyan-500/30 rounded-bl-lg transition-all duration-300 group-hover/project:w-12 group-hover/project:h-12 group-hover/project:border-cyan-400/60" />
                 
-                <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground group-hover:text-cyan-300 transition-colors">
+                <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground group-hover/project:text-cyan-300 transition-colors">
                   {project.title}
-                  <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-cyan-400" />
+                  <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all group-hover/project:-translate-y-0.5 group-hover/project:translate-x-0.5 group-hover/project:text-cyan-400" />
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {project.description}
@@ -104,10 +105,10 @@ export function ProjectsSection() {
           href="https://github.com/vipulsajjanwar"
           target="_blank"
           rel="noopener noreferrer"
-          className="group mt-12 inline-flex items-center gap-2 px-6 py-3 rounded-full backdrop-blur-xl bg-card/30 border border-cyan-500/30 text-foreground transition-all hover:border-cyan-500/60 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:text-cyan-300"
+          className="group/viewall mt-12 inline-flex items-center gap-2 px-6 py-3 rounded-full backdrop-blur-xl bg-card/30 border border-cyan-500/30 text-foreground transition-all duration-300 hover:border-cyan-500/60 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:text-cyan-300"
         >
           View All Repositories
-          <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover/viewall:-translate-y-0.5 group-hover/viewall:translate-x-0.5" />
         </Link>
       </div>
     </section>

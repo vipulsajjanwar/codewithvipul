@@ -20,9 +20,10 @@ export function HeroSection() {
         {/* Left Column - Identity */}
         <div className="flex flex-col justify-center">
           {/* Glassmorphism Card */}
-          <div className="relative p-8 rounded-2xl backdrop-blur-xl bg-card/30 border border-cyan-500/20 shadow-[0_0_30px_rgba(6,182,212,0.1)]">
-            {/* Glowing Border Effect */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-transparent to-purple-500/20 opacity-50" style={{ padding: '1px' }} />
+          <div className="group relative p-8 rounded-2xl backdrop-blur-xl bg-card/30 border border-cyan-500/20 shadow-[0_0_30px_rgba(6,182,212,0.1)] transition-all duration-300 hover:border-cyan-500/50 hover:shadow-[0_0_40px_rgba(6,182,212,0.2)]">
+            {/* Corner Accents with Hover Animation */}
+            <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-cyan-500/40 rounded-tl-2xl transition-all duration-300 group-hover:w-16 group-hover:h-16 group-hover:border-cyan-400/70" />
+            <div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-purple-500/40 rounded-br-2xl transition-all duration-300 group-hover:w-16 group-hover:h-16 group-hover:border-purple-400/70" />
             
             <h1 className="text-balance text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl bg-gradient-to-r from-foreground via-cyan-300 to-foreground bg-clip-text">
               Vipul Sajjanwar
@@ -45,9 +46,9 @@ export function HeroSection() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="group flex items-center gap-4 text-sm uppercase tracking-widest text-muted-foreground transition-all hover:text-cyan-400"
+                  className="group/navlink flex items-center gap-4 text-sm uppercase tracking-widest text-muted-foreground transition-all hover:text-cyan-400"
                 >
-                  <span className="h-px w-8 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all group-hover:w-16 group-hover:shadow-[0_0_10px_rgba(6,182,212,0.5)]" />
+                  <span className="h-px w-8 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover/navlink:w-16 group-hover/navlink:shadow-[0_0_10px_rgba(6,182,212,0.5)]" />
                   {link.label}
                 </Link>
               ))}
@@ -66,7 +67,7 @@ export function HeroSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.label}
-                  className="p-2 rounded-lg bg-card/50 border border-cyan-500/20 text-muted-foreground transition-all hover:text-cyan-400 hover:border-cyan-500/50 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)]"
+                  className="p-2 rounded-lg bg-card/50 border border-cyan-500/20 text-muted-foreground transition-all duration-300 hover:text-cyan-400 hover:border-cyan-500/50 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] hover:scale-110"
                 >
                   <SocialIcon name={link.icon} />
                 </a>
@@ -78,10 +79,10 @@ export function HeroSection() {
         {/* Right Column - Bio */}
         <div className="flex flex-col justify-center">
           {/* Glassmorphism Card for Bio */}
-          <div className="relative p-8 rounded-2xl backdrop-blur-xl bg-card/30 border border-purple-500/20 shadow-[0_0_30px_rgba(147,51,234,0.1)]">
-            {/* Subtle corner accents */}
-            <div className="absolute top-0 left-0 w-16 h-16 border-l-2 border-t-2 border-cyan-500/40 rounded-tl-2xl" />
-            <div className="absolute bottom-0 right-0 w-16 h-16 border-r-2 border-b-2 border-purple-500/40 rounded-br-2xl" />
+          <div className="group relative p-8 rounded-2xl backdrop-blur-xl bg-card/30 border border-purple-500/20 shadow-[0_0_30px_rgba(147,51,234,0.1)] transition-all duration-300 hover:border-purple-500/50 hover:shadow-[0_0_40px_rgba(147,51,234,0.2)]">
+            {/* Corner accents with hover animation */}
+            <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-cyan-500/40 rounded-tl-2xl transition-all duration-300 group-hover:w-16 group-hover:h-16 group-hover:border-cyan-400/70" />
+            <div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-purple-500/40 rounded-br-2xl transition-all duration-300 group-hover:w-16 group-hover:h-16 group-hover:border-purple-400/70" />
             
             <div className="space-y-6 text-muted-foreground">
               <p className="text-lg leading-relaxed">
