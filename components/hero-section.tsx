@@ -2,7 +2,13 @@ import Link from "next/link"
 
 export function HeroSection() {
   return (
-    <section id="about" className="min-h-screen pb-24 pt-32 md:pt-40">
+    <section id="about" className="relative min-h-screen pb-24 pt-32 md:pt-40">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat opacity-30"
+        style={{ backgroundImage: "url('/about-bg.jpg')" }}
+      />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background/80 to-background" />
       <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-2 lg:gap-16">
         {/* Left Column - Identity */}
         <div className="flex flex-col justify-center">
