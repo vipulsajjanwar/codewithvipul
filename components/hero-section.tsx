@@ -46,9 +46,9 @@ export function HeroSection() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="group flex items-center gap-4 text-sm uppercase tracking-widest text-muted-foreground transition-all hover:text-cyan-400"
+                  className="group/navlink flex items-center gap-4 text-sm uppercase tracking-widest text-muted-foreground transition-all hover:text-cyan-400"
                 >
-                  <span className="h-px w-8 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all group-hover:w-16 group-hover:shadow-[0_0_10px_rgba(6,182,212,0.5)]" />
+                  <span className="h-px w-8 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover/navlink:w-16 group-hover/navlink:shadow-[0_0_10px_rgba(6,182,212,0.5)]" />
                   {link.label}
                 </Link>
               ))}
@@ -67,7 +67,7 @@ export function HeroSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.label}
-                  className="p-2 rounded-lg bg-card/50 border border-cyan-500/20 text-muted-foreground transition-all hover:text-cyan-400 hover:border-cyan-500/50 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)]"
+                  className="p-2 rounded-lg bg-card/50 border border-cyan-500/20 text-muted-foreground transition-all duration-300 hover:text-cyan-400 hover:border-cyan-500/50 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] hover:scale-110"
                 >
                   <SocialIcon name={link.icon} />
                 </a>

@@ -52,11 +52,11 @@ export function ExperienceSection() {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="group relative rounded-2xl backdrop-blur-xl bg-card/30 border border-cyan-500/20 p-6 transition-all duration-300 hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)]"
+              className="group/skillcard relative rounded-2xl backdrop-blur-xl bg-card/30 border border-cyan-500/20 p-6 transition-all duration-300 hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)]"
             >
               {/* Corner Accents */}
-              <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-cyan-500/40 rounded-tl-2xl transition-all duration-300 group-hover:w-12 group-hover:h-12 group-hover:border-cyan-400/60" />
-              <div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-purple-500/40 rounded-br-2xl transition-all duration-300 group-hover:w-12 group-hover:h-12 group-hover:border-purple-400/60" />
+              <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-cyan-500/40 rounded-tl-2xl transition-all duration-300 group-hover/skillcard:w-12 group-hover/skillcard:h-12 group-hover/skillcard:border-cyan-400/60" />
+              <div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-purple-500/40 rounded-br-2xl transition-all duration-300 group-hover/skillcard:w-12 group-hover/skillcard:h-12 group-hover/skillcard:border-purple-400/60" />
               
               <h3 className="mb-4 font-medium text-cyan-300">{category.title}</h3>
               <div className="flex flex-wrap gap-2">
@@ -75,10 +75,10 @@ export function ExperienceSection() {
         </div>
 
         <div className="mt-12 grid gap-8 md:grid-cols-2">
-          <div className="group relative rounded-2xl backdrop-blur-xl bg-card/30 border border-purple-500/20 p-6 transition-all duration-300 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(147,51,234,0.2)]">
+          <div className="group/strength relative rounded-2xl backdrop-blur-xl bg-card/30 border border-purple-500/20 p-6 transition-all duration-300 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(147,51,234,0.2)]">
             {/* Corner Accents */}
-            <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-purple-500/40 rounded-tl-2xl transition-all duration-300 group-hover:w-12 group-hover:h-12 group-hover:border-purple-400/60" />
-            <div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-cyan-500/40 rounded-br-2xl transition-all duration-300 group-hover:w-12 group-hover:h-12 group-hover:border-cyan-400/60" />
+            <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-purple-500/40 rounded-tl-2xl transition-all duration-300 group-hover/strength:w-12 group-hover/strength:h-12 group-hover/strength:border-purple-400/60" />
+            <div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-cyan-500/40 rounded-br-2xl transition-all duration-300 group-hover/strength:w-12 group-hover/strength:h-12 group-hover/strength:border-cyan-400/60" />
             
             <h3 className="mb-4 font-medium text-purple-300">Core Strengths</h3>
             <div className="flex flex-wrap gap-2">
@@ -94,10 +94,10 @@ export function ExperienceSection() {
             </div>
           </div>
 
-          <div className="group relative rounded-2xl backdrop-blur-xl bg-card/30 border border-cyan-500/20 p-6 transition-all duration-300 hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)]">
+          <div className="group/soft relative rounded-2xl backdrop-blur-xl bg-card/30 border border-cyan-500/20 p-6 transition-all duration-300 hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)]">
             {/* Corner Accents */}
-            <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-cyan-500/40 rounded-tl-2xl transition-all duration-300 group-hover:w-12 group-hover:h-12 group-hover:border-cyan-400/60" />
-            <div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-purple-500/40 rounded-br-2xl transition-all duration-300 group-hover:w-12 group-hover:h-12 group-hover:border-purple-400/60" />
+            <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-cyan-500/40 rounded-tl-2xl transition-all duration-300 group-hover/soft:w-12 group-hover/soft:h-12 group-hover/soft:border-cyan-400/60" />
+            <div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-purple-500/40 rounded-br-2xl transition-all duration-300 group-hover/soft:w-12 group-hover/soft:h-12 group-hover/soft:border-purple-400/60" />
             
             <h3 className="mb-4 font-medium text-cyan-300">Soft Skills</h3>
             <div className="flex flex-wrap gap-2">
