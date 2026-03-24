@@ -57,16 +57,6 @@ codewithvipul/
 ├── postcss.config.mjs
 ├── tsconfig.json
 └── README.md
-```
-
-codewithvipul/
-├── app/ or pages/
-├── components/
-├── public/
-├── styles/
-└── README.md
-
-````
 
 ---
 
