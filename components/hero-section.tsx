@@ -29,7 +29,7 @@ export function HeroSection() {
               Vipul Sajjanwar
             </h1>
             <h2 className="mt-4 text-xl font-medium md:text-2xl bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              AI-SDET Test Engineer
+              SDET Test Engineer
             </h2>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-muted-foreground">
               Building scalable automation frameworks and AI-driven testing strategies.
