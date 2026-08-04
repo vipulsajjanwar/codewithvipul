@@ -2,20 +2,6 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { motion } from "framer-motion"
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.2, delayChildren: 0.3 },
-  },
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-}
 
 export function HeroSection() {
   return (
@@ -27,51 +13,28 @@ export function HeroSection() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6">
-        <motion.div
-          className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Left Column */}
-          <motion.div variants={itemVariants} className="space-y-8">
+          <div className="space-y-8">
             <div className="space-y-4">
-              <motion.p
-                className="text-primary font-medium text-sm tracking-wider uppercase"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
+              <p className="text-primary font-medium text-sm tracking-wider uppercase">
                 Welcome to my portfolio
-              </motion.p>
-              <motion.h1
-                className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-              >
+              </p>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance">
                 <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                   Vipul Sajjanwar
                 </span>
-              </motion.h1>
-              <motion.h2
-                className="text-2xl md:text-3xl font-semibold text-muted-foreground"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
+              </h1>
+              <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground">
                 SDET Engineer & Automation Architect
-              </motion.h2>
+              </h2>
             </div>
 
-            <motion.p
-              className="text-lg text-muted-foreground leading-relaxed max-w-2xl"
-              variants={itemVariants}
-            >
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
               7.5+ years of experience designing scalable automation frameworks and delivering high-quality software. Expert in Java, Selenium WebDriver, TestNG, Rest Assured, and CI/CD pipelines with Jenkins and Docker.
-            </motion.p>
+            </p>
 
-            <motion.div className="flex flex-col sm:flex-row gap-4 pt-4" variants={itemVariants}>
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
                 href="#projects"
                 className="rounded-lg bg-primary px-8 py-3 font-medium text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/30 inline-block text-center"
@@ -84,10 +47,10 @@ export function HeroSection() {
               >
                 Get in Touch
               </Link>
-            </motion.div>
+            </div>
 
             {/* Tech Stack Preview */}
-            <motion.div variants={itemVariants} className="pt-8 space-y-4">
+            <div className="pt-8 space-y-4">
               <p className="text-sm font-semibold text-muted-foreground">Expertise</p>
               <div className="flex flex-wrap gap-2">
                 {['Java', 'Selenium', 'TestNG', 'REST API', 'JMeter', 'Jenkins', 'Docker', 'SQL'].map((tech) => (
@@ -99,14 +62,11 @@ export function HeroSection() {
                   </span>
                 ))}
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* Right Column - Image */}
-          <motion.div
-            variants={itemVariants}
-            className="relative flex justify-center items-center"
-          >
+          <div className="relative flex justify-center items-center">
             <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/10 rounded-3xl blur-2xl opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative w-full max-w-md">
               <div className="relative p-1 rounded-3xl backdrop-blur-xl bg-card/30 border border-primary/20">
@@ -135,8 +95,8 @@ export function HeroSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   )

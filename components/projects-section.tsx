@@ -1,10 +1,7 @@
-"use client"
-
 import Link from "next/link"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { ArrowUpRight } from "lucide-react"
-import { motion } from "framer-motion"
 
 const projects = [
   {
@@ -41,32 +38,13 @@ const projects = [
   },
 ]
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1, delayChildren: 0.2 },
-  },
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-}
-
 export function ProjectsSection() {
   return (
     <section id="projects" className="relative py-20 md:py-32 px-6">
       <div className="mx-auto max-w-7xl">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={containerVariants}
-          className="space-y-12"
-        >
+        <div className="space-y-12">
           {/* Header */}
-          <motion.div variants={itemVariants} className="space-y-4">
+          <div className="space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                 Featured Projects
@@ -75,65 +53,59 @@ export function ProjectsSection() {
             <p className="text-lg text-muted-foreground max-w-2xl">
               Showcasing my best automation frameworks and tools that demonstrate expertise in test automation, DevOps, and continuous delivery.
             </p>
-          </motion.div>
+          </div>
 
           {/* Projects Grid */}
-          <motion.div className="grid gap-6 md:grid-cols-2" variants={containerVariants}>
+          <div className="grid gap-6 md:grid-cols-2">
             {projects.map((project, index) => (
-              <motion.div
+              <Link
                 key={index}
-                variants={itemVariants}
-                whileHover={{ y: -8 }}
-                transition={{ duration: 0.3 }}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative overflow-hidden rounded-lg backdrop-blur-xl bg-card/30 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 flex flex-col h-full hover:-translate-y-2"
               >
-                <Link
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative overflow-hidden rounded-lg backdrop-blur-xl bg-card/30 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 flex flex-col h-full"
-                >
-                  {/* Image Container */}
-                  <div className="relative aspect-video overflow-hidden bg-muted/30">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+                {/* Image Container */}
+                <div className="relative aspect-video overflow-hidden bg-muted/30">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+                </div>
+
+                {/* Content */}
+                <div className="relative flex-1 p-6 space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold text-foreground flex items-center gap-2 group-hover:text-primary transition-colors">
+                      {project.title}
+                      <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {project.description}
+                    </p>
                   </div>
 
-                  {/* Content */}
-                  <div className="relative flex-1 p-6 space-y-4">
-                    <div className="space-y-2">
-                      <h3 className="text-xl font-bold text-foreground flex items-center gap-2 group-hover:text-primary transition-colors">
-                        {project.title}
-                        <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
-                      </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {project.description}
-                      </p>
-                    </div>
-
-                    {/* Tech Stack */}
-                    <div className="flex flex-wrap gap-2 pt-4">
-                      {project.technologies.map((tech) => (
-                        <Badge
-                          key={tech}
-                          className="bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 pt-4">
+                    {project.technologies.map((tech) => (
+                      <Badge
+                        key={tech}
+                        className="bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
                   </div>
-                </Link>
-              </motion.div>
+                </div>
+              </Link>
             ))}
-          </motion.div>
+          </div>
 
           {/* View All */}
-          <motion.div variants={itemVariants} className="pt-8">
+          <div className="pt-8">
             <Link
               href="https://github.com/vipulsajjanwar"
               target="_blank"
@@ -143,8 +115,8 @@ export function ProjectsSection() {
               View All Projects on GitHub
               <ArrowUpRight className="h-4 w-4" />
             </Link>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   )

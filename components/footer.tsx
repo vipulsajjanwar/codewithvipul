@@ -1,19 +1,10 @@
-"use client"
-
 import Link from "next/link"
-import { motion } from "framer-motion"
 
 export function Footer() {
   return (
     <footer className="relative border-t border-primary/10 py-12 overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="space-y-8"
-        >
+        <div className="space-y-8">
           {/* Links and Info */}
           <div className="grid gap-8 md:grid-cols-3">
             {/* Brand */}
@@ -27,9 +18,9 @@ export function Footer() {
               <h4 className="font-medium text-foreground text-sm uppercase tracking-wider">Navigation</h4>
               <nav className="flex flex-col gap-2 text-sm">
                 {[
-                  { href: "#about", label: "About" },
-                  { href: "#skills", label: "Skills" },
+                  { href: "#hero", label: "Home" },
                   { href: "#projects", label: "Projects" },
+                  { href: "#contact", label: "Contact" },
                 ].map((link) => (
                   <Link
                     key={link.href}
@@ -69,13 +60,7 @@ export function Footer() {
           <div className="h-px w-full bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
 
           {/* Copyright */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center justify-between gap-4 md:flex-row text-sm text-muted-foreground"
-          >
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row text-sm text-muted-foreground">
             <p>
               Designed & Built by{" "}
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-semibold">
@@ -83,8 +68,8 @@ export function Footer() {
               </span>
             </p>
             <p>© {new Date().getFullYear()} All rights reserved.</p>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </footer>
   )
