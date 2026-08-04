@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section id="hero" className="relative min-h-screen pb-24 pt-32 md:pt-40 overflow-hidden">
+    <section id="hero" className="relative min-h-screen pb-24 pt-32 md:pt-40 overflow-hidden" aria-label="Hero Section - Introduction">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full -z-20">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
@@ -37,13 +37,13 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
                 href="#projects"
-                className="rounded-lg bg-primary px-8 py-3 font-medium text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/30 inline-block text-center"
+                className="rounded-lg bg-primary px-8 py-3 font-medium text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background inline-block text-center"
               >
                 View My Work
               </Link>
               <Link
                 href="#contact"
-                className="rounded-lg border-2 border-primary px-8 py-3 font-medium text-primary transition-all hover:bg-primary/10 inline-block text-center"
+                className="rounded-lg border-2 border-primary px-8 py-3 font-medium text-primary transition-all hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background inline-block text-center"
               >
                 Get in Touch
               </Link>

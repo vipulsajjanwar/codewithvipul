@@ -40,7 +40,7 @@ const projects = [
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="relative py-20 md:py-32 px-6">
+    <section id="projects" className="relative py-20 md:py-32 px-6" aria-label="Projects Section">
       <div className="mx-auto max-w-7xl">
         <div className="space-y-12">
           {/* Header */}
@@ -110,10 +110,11 @@ export function ProjectsSection() {
               href="https://github.com/vipulsajjanwar"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:shadow-primary/30"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:shadow-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              aria-label="View All Projects on GitHub - Opens in new tab"
             >
               View All Projects on GitHub
-              <ArrowUpRight className="h-4 w-4" />
+              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
         </div>
