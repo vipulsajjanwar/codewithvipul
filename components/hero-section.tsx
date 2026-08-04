@@ -99,7 +99,7 @@ export function HeroSection() {
               {/* Portrait Image */}
               <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
                 <Image
-                  src="/developer-portrait.png"
+                  src="/developer-portrait-image.png"
                   alt="Vipul Sajjanwar - Professional Portrait"
                   width={400}
                   height={500}
