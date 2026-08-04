@@ -1,62 +1,90 @@
+"use client"
+
 import Link from "next/link"
-import { Coffee } from "lucide-react"
+import { motion } from "framer-motion"
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-cyan-500/20 py-12 overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-gradient-to-t from-purple-500/10 to-transparent blur-3xl" />
-      
-      <div className="relative mx-auto max-w-6xl px-6">
-        <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-          <p className="text-sm text-muted-foreground">
-            Designed & Built by <span className="text-cyan-400">Vipul Sajjanwar</span>
-          </p>
-          <nav className="flex flex-wrap items-center justify-center gap-6">
-            <Link
-              href="mailto:vipulsajjanwar144@gmail.com"
-              className="text-sm text-muted-foreground transition-all hover:text-cyan-400"
-            >
-              vipulsajjanwar144@gmail.com
-            </Link>
-            <Link
-              href="https://github.com/vipulsajjanwar"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-muted-foreground transition-all hover:text-cyan-400"
-            >
-              GitHub
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/vipulsajjanwar07/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-muted-foreground transition-all hover:text-purple-400"
-            >
-              LinkedIn
-            </Link>
-            <Link
-              href="https://medium.com/@vipulsajjanwar144"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-muted-foreground transition-all hover:text-purple-400"
-            >
-              Medium
-            </Link>
-            <Link
-              href="https://buymeacoffee.com/vipulsajjaq"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full backdrop-blur-xl bg-card/30 border border-purple-500/30 px-4 py-2 text-sm text-purple-300 transition-all hover:border-purple-500/60 hover:shadow-[0_0_20px_rgba(147,51,234,0.3)] hover:text-purple-200"
-            >
-              <Coffee className="h-4 w-4" />
-              Buy me a coffee
-            </Link>
-          </nav>
-        </div>
-        
-        {/* Bottom Decorative Line */}
-        <div className="mt-8 h-px w-full bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
+    <footer className="relative border-t border-primary/10 py-12 overflow-hidden">
+      <div className="relative mx-auto max-w-7xl px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="space-y-8"
+        >
+          {/* Links and Info */}
+          <div className="grid gap-8 md:grid-cols-3">
+            {/* Brand */}
+            <div className="space-y-2">
+              <h3 className="font-semibold text-foreground">Vipul Sajjanwar</h3>
+              <p className="text-sm text-muted-foreground">SDET Engineer & Automation Architect</p>
+            </div>
+
+            {/* Quick Links */}
+            <div className="space-y-3">
+              <h4 className="font-medium text-foreground text-sm uppercase tracking-wider">Navigation</h4>
+              <nav className="flex flex-col gap-2 text-sm">
+                {[
+                  { href: "#about", label: "About" },
+                  { href: "#skills", label: "Skills" },
+                  { href: "#projects", label: "Projects" },
+                ].map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+
+            {/* Connect */}
+            <div className="space-y-3">
+              <h4 className="font-medium text-foreground text-sm uppercase tracking-wider">Connect</h4>
+              <nav className="flex flex-col gap-2 text-sm">
+                {[
+                  { href: "https://github.com/vipulsajjanwar", label: "GitHub" },
+                  { href: "https://www.linkedin.com/in/vipulsajjanwar07/", label: "LinkedIn" },
+                  { href: "mailto:vipulsajjanwar07@gmail.com", label: "Email" },
+                ].map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    target={link.href.startsWith("mailto") ? undefined : "_blank"}
+                    rel={link.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+
+          {/* Copyright */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center justify-between gap-4 md:flex-row text-sm text-muted-foreground"
+          >
+            <p>
+              Designed & Built by{" "}
+              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-semibold">
+                Vipul Sajjanwar
+              </span>
+            </p>
+            <p>© {new Date().getFullYear()} All rights reserved.</p>
+          </motion.div>
+        </motion.div>
       </div>
     </footer>
   )

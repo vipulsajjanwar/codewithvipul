@@ -7,9 +7,14 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Vipul Sajjanwar - AI-SDET Test Engineer',
-  description: 'Test Automation Engineer with 7+ years of experience delivering scalable automation frameworks for Web, API, and Performance Testing.',
+  title: 'Vipul Sajjanwar - SDET Engineer & Automation Architect',
+  description: 'Experienced Software Development Engineer in Test with 7.5+ years building scalable automation frameworks, designing CI/CD pipelines, and delivering high-quality software.',
   generator: 'v0.app',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
   icons: {
     icon: [
       {
@@ -35,8 +40,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="font-sans antialiased">
+    <html lang="en" className="bg-background dark">
+      <body className="font-sans antialiased bg-background">
         {children}
         <Analytics />
       </body>
