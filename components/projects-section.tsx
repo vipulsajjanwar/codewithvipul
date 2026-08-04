@@ -5,111 +5,121 @@ import { ArrowUpRight } from "lucide-react"
 
 const projects = [
   {
-    title: "AutoVerse",
+    title: "AWS DevOps AI Agents",
     description:
-      "A scalable test automation framework designed for enterprise-level testing with modular architecture, data-driven testing, and comprehensive reporting capabilities.",
+      "Predictive auto-scaling and self-healing AI agent for AWS ECS Fargate with ML-driven forecasting, automated remediation, Slack notifications, and CloudWatch dashboards.",
     image: "/projects/devflow.jpg",
-    url: "https://github.com/vipulsajjanwar/AutoVerse",
-    technologies: ["Java", "Selenium", "TestNG", "Maven", "ExtentReports"],
+    url: "https://github.com/vipulsajjanwar/ai_agent_aws",
+    technologies: ["Python", "AWS", "Terraform", "Lambda", "ML"],
   },
   {
-    title: "AutoGenAI",
+    title: "Page Object Model - Stockmaster",
     description:
-      "AI-powered test generation tool that leverages machine learning for autonomous testing, self-healing scripts, and intelligent test case creation.",
+      "Production automation testing project built with Selenium WebDriver and Java. Demonstrates enterprise-grade Page Object Model patterns for scalable and maintainable test automation.",
     image: "/projects/codementor.jpg",
-    url: "https://github.com/vipulsajjanwar/AutoGenAI",
-    technologies: ["Python", "AI/ML", "Selenium", "REST API", "Jenkins"],
+    url: "https://github.com/vipulsajjanwar/Page-Object-Model-",
+    technologies: ["Java", "Selenium", "WebDriver", "Automation", "Testing"],
   },
   {
-    title: "REST API Test",
+    title: "CodeWithVipul Portfolio",
     description:
-      "Enterprise-grade REST Assured API automation framework with chain testing capabilities, comprehensive validation, and seamless CI/CD integration.",
+      "Personal portfolio and tech blog showcasing QA, DevOps, Kubernetes, and automation testing projects. Built with Next.js, TypeScript, and Tailwind CSS. Deployed on Vercel.",
     image: "/projects/pixelcraft.jpg",
-    url: "https://github.com/vipulsajjanwar/rest-api-test",
-    technologies: ["Java", "REST Assured", "TestNG", "Maven", "Postman"],
+    url: "https://github.com/vipulsajjanwar/codewithvipul",
+    technologies: ["Next.js", "TypeScript", "Tailwind", "Vercel", "React"],
   },
   {
-    title: "Dockerized ELK Stack",
+    title: "Java Programming Workshop",
     description:
-      "A complete Docker-based ELK (Elasticsearch, Logstash, Kibana) stack setup for test analytics, real-time dashboards, and automated log analysis.",
+      "Comprehensive Java learning repository covering fundamentals and advanced concepts. Educational resource for building strong Java programming foundations.",
     image: "/projects/cloudsync.jpg",
-    url: "https://github.com/vipulsajjanwar/dockerized-elk-stack",
-    technologies: ["Docker", "Elasticsearch", "Kibana", "Logstash", "DevOps"],
+    url: "https://github.com/vipulsajjanwar/Java-Workshop",
+    technologies: ["Java", "Programming", "Learning", "OOP", "Development"],
   },
 ]
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="relative py-24 overflow-hidden">
-      {/* Background Glow Effects */}
-      <div className="absolute top-1/4 left-0 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
-      
-      <div className="relative mx-auto max-w-6xl px-6">
-        <h2 className="mb-12 text-sm uppercase tracking-widest bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent font-medium">
-          Featured Projects
-        </h2>
+    <section id="projects" className="relative py-20 md:py-32 px-6" aria-label="Projects Section">
+      <div className="mx-auto max-w-7xl">
+        <div className="space-y-12">
+          {/* Header */}
+          <div className="space-y-4 animate-fade-in-up">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                Featured Projects
+              </span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl">
+              Showcasing my best automation frameworks and tools that demonstrate expertise in test automation, DevOps, and continuous delivery.
+            </p>
+          </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
-          {projects.map((project, index) => (
+          {/* Projects Grid */}
+          <div className="grid gap-6 md:grid-cols-2">
+            {projects.map((project, index) => (
+              <Link
+                key={index}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative overflow-hidden rounded-lg backdrop-blur-xl bg-card/30 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 flex flex-col h-full hover:-translate-y-2 animate-fade-in-up"
+                style={{ animationDelay: `${100 + index * 100}ms` }}
+              >
+                {/* Image Container */}
+                <div className="relative aspect-video overflow-hidden bg-muted/30">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-125"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent group-hover:opacity-60 transition-opacity duration-300" />
+                </div>
+
+                {/* Content */}
+                <div className="relative flex-1 p-6 space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold text-foreground flex items-center gap-2 group-hover:text-primary transition-colors">
+                      {project.title}
+                      <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 pt-4">
+                    {project.technologies.map((tech, techIndex) => (
+                      <Badge
+                        key={tech}
+                        className="bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20 hover:scale-110 transition-transform group-hover:brightness-125 duration-300"
+                        style={{ transitionDelay: `${techIndex * 30}ms` }}
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* View All */}
+          <div className="pt-8 animate-fade-in-up delay-500">
             <Link
-              key={index}
-              href={project.url}
+              href="https://github.com/vipulsajjanwar"
               target="_blank"
               rel="noopener noreferrer"
-              className="group/project relative overflow-hidden rounded-2xl backdrop-blur-xl bg-card/30 border border-cyan-500/20 transition-all duration-300 hover:border-cyan-500/50 hover:shadow-[0_0_40px_rgba(6,182,212,0.2)]"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:shadow-primary/30 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:scale-95"
+              aria-label="View All Projects on GitHub - Opens in new tab"
             >
-              {/* Glowing Border Effect on Hover */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/0 via-cyan-500/10 to-purple-500/0 opacity-0 transition-opacity duration-300 group-hover/project:opacity-100" />
-              
-              <div className="relative aspect-video overflow-hidden bg-muted">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover/project:scale-105"
-                />
-                {/* Image Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
-              </div>
-              
-              <div className="relative p-6">
-                {/* Corner Accents */}
-                <div className="absolute top-0 right-0 w-8 h-8 border-r-2 border-t-2 border-purple-500/30 rounded-tr-lg transition-all duration-300 group-hover/project:w-12 group-hover/project:h-12 group-hover/project:border-purple-400/60" />
-                <div className="absolute bottom-0 left-0 w-8 h-8 border-l-2 border-b-2 border-cyan-500/30 rounded-bl-lg transition-all duration-300 group-hover/project:w-12 group-hover/project:h-12 group-hover/project:border-cyan-400/60" />
-                
-                <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground group-hover/project:text-cyan-300 transition-colors">
-                  {project.title}
-                  <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all group-hover/project:-translate-y-0.5 group-hover/project:translate-x-0.5 group-hover/project:text-cyan-400" />
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {project.description}
-                </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.technologies.map((tech, techIndex) => (
-                    <Badge
-                      key={tech}
-                      variant="secondary"
-                      className={`${techIndex % 2 === 0 ? 'bg-cyan-500/10 text-cyan-300 border border-cyan-500/30' : 'bg-purple-500/10 text-purple-300 border border-purple-500/30'} hover:shadow-[0_0_10px_rgba(6,182,212,0.3)] transition-all`}
-                    >
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
+              View All Projects on GitHub
+              <ArrowUpRight className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true" />
             </Link>
-          ))}
+          </div>
         </div>
-
-        <Link
-          href="https://github.com/vipulsajjanwar"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group/viewall mt-12 inline-flex items-center gap-2 px-6 py-3 rounded-full backdrop-blur-xl bg-card/30 border border-cyan-500/30 text-foreground transition-all duration-300 hover:border-cyan-500/60 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:text-cyan-300"
-        >
-          View All Repositories
-          <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover/viewall:-translate-y-0.5 group-hover/viewall:translate-x-0.5" />
-        </Link>
       </div>
     </section>
   )

@@ -7,9 +7,15 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Vipul Sajjanwar - AI-SDET Test Engineer',
-  description: 'Test Automation Engineer with 7+ years of experience delivering scalable automation frameworks for Web, API, and Performance Testing.',
+  title: 'Vipul Sajjanwar - Software Test Engineer & QA Automation Specialist',
+  description: 'Senior QA automation engineer with 7+ years of experience in test automation, API testing, and DevOps. Expert in Java, Selenium, TestNG, REST Assured, and AWS. Building scalable automation frameworks and CI/CD pipelines.',
+  keywords: 'QA engineer, test automation, SDET, Selenium, Java, API testing, REST Assured, TestNG, Jenkins, Docker, AWS, DevOps, automation framework',
   generator: 'v0.app',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
   icons: {
     icon: [
       {
@@ -35,8 +41,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="font-sans antialiased">
+    <html lang="en" className="bg-background dark">
+      <body className="font-sans antialiased bg-background">
         {children}
         <Analytics />
       </body>
