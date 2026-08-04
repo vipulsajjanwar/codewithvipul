@@ -26,12 +26,12 @@ export function HeroSection() {
                 </span>
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground animate-fade-in-up delay-200">
-                SDET Engineer & Automation Architect
+                Software Test Engineer & QA Automation Specialist
               </h2>
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl animate-fade-in-up delay-300">
-              7.5+ years of experience designing scalable automation frameworks and delivering high-quality software. Expert in Java, Selenium WebDriver, TestNG, Rest Assured, and CI/CD pipelines with Jenkins and Docker.
+              7+ years of professional experience in Quality Assurance and test automation. Specialized in building scalable automation frameworks, API testing, and DevOps integration. Currently working at icedq.ai on innovative QA solutions with expertise in Java, Selenium, TestNG, and CI/CD pipelines.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -51,9 +51,9 @@ export function HeroSection() {
 
             {/* Tech Stack Preview */}
             <div className="pt-8 space-y-4 animate-fade-in-up delay-600">
-              <p className="text-sm font-semibold text-muted-foreground">Expertise</p>
+              <p className="text-sm font-semibold text-muted-foreground">Core Technologies</p>
               <div className="flex flex-wrap gap-2">
-                {['Java', 'Selenium', 'TestNG', 'REST API', 'JMeter', 'Jenkins', 'Docker', 'SQL'].map((tech, index) => (
+                {['Java', 'Selenium', 'TestNG', 'REST Assured', 'Python', 'Jenkins', 'Docker', 'AWS'].map((tech, index) => (
                   <span
                     key={tech}
                     className="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary border border-primary/20 animate-fade-in-up hover:scale-110 transition-transform"
@@ -91,7 +91,7 @@ export function HeroSection() {
                 {/* Badge */}
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full backdrop-blur-lg bg-card/60 border border-primary/40 text-center animate-fade-in-up delay-500">
                   <p className="text-xs font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                    7.5+ Years Experience
+                    7+ Years in QA
                   </p>
                 </div>
               </div>

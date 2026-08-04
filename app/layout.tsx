@@ -7,8 +7,9 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Vipul Sajjanwar - SDET Engineer & Automation Architect',
-  description: 'Experienced Software Development Engineer in Test with 7.5+ years building scalable automation frameworks, designing CI/CD pipelines, and delivering high-quality software.',
+  title: 'Vipul Sajjanwar - Software Test Engineer & QA Automation Specialist',
+  description: 'Senior QA automation engineer with 7+ years of experience in test automation, API testing, and DevOps. Expert in Java, Selenium, TestNG, REST Assured, and AWS. Building scalable automation frameworks and CI/CD pipelines.',
+  keywords: 'QA engineer, test automation, SDET, Selenium, Java, API testing, REST Assured, TestNG, Jenkins, Docker, AWS, DevOps, automation framework',
   generator: 'v0.app',
   viewport: {
     width: 'device-width',

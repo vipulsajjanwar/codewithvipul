@@ -5,36 +5,36 @@ import { ArrowUpRight } from "lucide-react"
 
 const projects = [
   {
-    title: "AutoVerse",
+    title: "AWS DevOps AI Agents",
     description:
-      "A scalable test automation framework designed for enterprise-level testing with modular architecture, data-driven testing, and comprehensive reporting capabilities.",
+      "Predictive auto-scaling and self-healing AI agent for AWS ECS Fargate with ML-driven forecasting, automated remediation, Slack notifications, and CloudWatch dashboards.",
     image: "/projects/devflow.jpg",
-    url: "https://github.com/vipulsajjanwar/AutoVerse",
-    technologies: ["Java", "Selenium", "TestNG", "Maven", "ExtentReports"],
+    url: "https://github.com/vipulsajjanwar/ai_agent_aws",
+    technologies: ["Python", "AWS", "Terraform", "Lambda", "ML"],
   },
   {
-    title: "AutoGenAI",
+    title: "Page Object Model - Stockmaster",
     description:
-      "AI-powered test generation tool that leverages machine learning for autonomous testing, self-healing scripts, and intelligent test case creation.",
+      "Production automation testing project built with Selenium WebDriver and Java. Demonstrates enterprise-grade Page Object Model patterns for scalable and maintainable test automation.",
     image: "/projects/codementor.jpg",
-    url: "https://github.com/vipulsajjanwar/AutoGenAI",
-    technologies: ["Python", "AI/ML", "Selenium", "REST API", "Jenkins"],
+    url: "https://github.com/vipulsajjanwar/Page-Object-Model-",
+    technologies: ["Java", "Selenium", "WebDriver", "Automation", "Testing"],
   },
   {
-    title: "REST API Test",
+    title: "CodeWithVipul Portfolio",
     description:
-      "Enterprise-grade REST Assured API automation framework with chain testing capabilities, comprehensive validation, and seamless CI/CD integration.",
+      "Personal portfolio and tech blog showcasing QA, DevOps, Kubernetes, and automation testing projects. Built with Next.js, TypeScript, and Tailwind CSS. Deployed on Vercel.",
     image: "/projects/pixelcraft.jpg",
-    url: "https://github.com/vipulsajjanwar/rest-api-test",
-    technologies: ["Java", "REST Assured", "TestNG", "Maven", "Postman"],
+    url: "https://github.com/vipulsajjanwar/codewithvipul",
+    technologies: ["Next.js", "TypeScript", "Tailwind", "Vercel", "React"],
   },
   {
-    title: "Dockerized ELK Stack",
+    title: "Java Programming Workshop",
     description:
-      "A complete Docker-based ELK (Elasticsearch, Logstash, Kibana) stack setup for test analytics, real-time dashboards, and automated log analysis.",
+      "Comprehensive Java learning repository covering fundamentals and advanced concepts. Educational resource for building strong Java programming foundations.",
     image: "/projects/cloudsync.jpg",
-    url: "https://github.com/vipulsajjanwar/dockerized-elk-stack",
-    technologies: ["Docker", "Elasticsearch", "Kibana", "Logstash", "DevOps"],
+    url: "https://github.com/vipulsajjanwar/Java-Workshop",
+    technologies: ["Java", "Programming", "Learning", "OOP", "Development"],
   },
 ]
 
