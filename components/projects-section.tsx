@@ -44,7 +44,7 @@ export function ProjectsSection() {
       <div className="mx-auto max-w-7xl">
         <div className="space-y-12">
           {/* Header */}
-          <div className="space-y-4">
+          <div className="space-y-4 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                 Featured Projects
@@ -63,7 +63,8 @@ export function ProjectsSection() {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative overflow-hidden rounded-lg backdrop-blur-xl bg-card/30 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 flex flex-col h-full hover:-translate-y-2"
+                className="group relative overflow-hidden rounded-lg backdrop-blur-xl bg-card/30 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 flex flex-col h-full hover:-translate-y-2 animate-fade-in-up"
+                style={{ animationDelay: `${100 + index * 100}ms` }}
               >
                 {/* Image Container */}
                 <div className="relative aspect-video overflow-hidden bg-muted/30">
@@ -71,9 +72,9 @@ export function ProjectsSection() {
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover transition-transform duration-700 group-hover:scale-125"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent group-hover:opacity-60 transition-opacity duration-300" />
                 </div>
 
                 {/* Content */}
@@ -90,10 +91,11 @@ export function ProjectsSection() {
 
                   {/* Tech Stack */}
                   <div className="flex flex-wrap gap-2 pt-4">
-                    {project.technologies.map((tech) => (
+                    {project.technologies.map((tech, techIndex) => (
                       <Badge
                         key={tech}
-                        className="bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20"
+                        className="bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20 hover:scale-110 transition-transform group-hover:brightness-125 duration-300"
+                        style={{ transitionDelay: `${techIndex * 30}ms` }}
                       >
                         {tech}
                       </Badge>
@@ -105,16 +107,16 @@ export function ProjectsSection() {
           </div>
 
           {/* View All */}
-          <div className="pt-8">
+          <div className="pt-8 animate-fade-in-up delay-500">
             <Link
               href="https://github.com/vipulsajjanwar"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:shadow-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:shadow-primary/30 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:scale-95"
               aria-label="View All Projects on GitHub - Opens in new tab"
             >
               View All Projects on GitHub
-              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+              <ArrowUpRight className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true" />
             </Link>
           </div>
         </div>

@@ -9,13 +9,13 @@ export function ContactSection() {
       <div className="mx-auto max-w-4xl">
         <div className="space-y-12">
           {/* Header */}
-          <div className="space-y-4 text-center">
+          <div className="space-y-4 text-center animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                 Let's Connect
               </span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up delay-100">
               I'm always interested in hearing about new projects and opportunities. Feel free to reach out through any of these channels.
             </p>
           </div>
@@ -25,9 +25,9 @@ export function ContactSection() {
             {/* Email */}
             <Link
               href="mailto:vipulsajjanwar07@gmail.com"
-              className="group relative overflow-hidden rounded-lg backdrop-blur-xl bg-card/30 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 p-6 flex flex-col items-center text-center space-y-4 hover:-translate-y-1"
+              className="group relative overflow-hidden rounded-lg backdrop-blur-xl bg-card/30 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 p-6 flex flex-col items-center text-center space-y-4 hover:-translate-y-1 animate-fade-in-up delay-200"
             >
-              <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+              <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors group-hover:scale-110">
                 <Mail className="h-6 w-6 text-primary" />
               </div>
               <div>
@@ -36,7 +36,7 @@ export function ContactSection() {
                   vipulsajjanwar07@gmail.com
                 </p>
               </div>
-              <ExternalLink className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+              <ExternalLink className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity group-hover:translate-x-1" />
             </Link>
 
             {/* GitHub */}
@@ -44,9 +44,9 @@ export function ContactSection() {
               href="https://github.com/vipulsajjanwar"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative overflow-hidden rounded-lg backdrop-blur-xl bg-card/30 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 p-6 flex flex-col items-center text-center space-y-4 hover:-translate-y-1"
+              className="group relative overflow-hidden rounded-lg backdrop-blur-xl bg-card/30 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 p-6 flex flex-col items-center text-center space-y-4 hover:-translate-y-1 animate-fade-in-up delay-300"
             >
-              <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+              <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors group-hover:scale-110">
                 <Github className="h-6 w-6 text-primary" />
               </div>
               <div>
@@ -55,7 +55,7 @@ export function ContactSection() {
                   @vipulsajjanwar
                 </p>
               </div>
-              <ExternalLink className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+              <ExternalLink className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity group-hover:translate-x-1" />
             </Link>
 
             {/* LinkedIn */}
@@ -63,9 +63,9 @@ export function ContactSection() {
               href="https://www.linkedin.com/in/vipulsajjanwar07/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative overflow-hidden rounded-lg backdrop-blur-xl bg-card/30 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 p-6 flex flex-col items-center text-center space-y-4 hover:-translate-y-1"
+              className="group relative overflow-hidden rounded-lg backdrop-blur-xl bg-card/30 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 p-6 flex flex-col items-center text-center space-y-4 hover:-translate-y-1 animate-fade-in-up delay-400"
             >
-              <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+              <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors group-hover:scale-110">
                 <Linkedin className="h-6 w-6 text-primary" />
               </div>
               <div>
@@ -74,7 +74,7 @@ export function ContactSection() {
                   vipulsajjanwar07
                 </p>
               </div>
-              <ExternalLink className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+              <ExternalLink className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity group-hover:translate-x-1" />
             </Link>
           </div>
 
@@ -82,7 +82,7 @@ export function ContactSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
             <Link
               href="mailto:vipulsajjanwar07@gmail.com"
-              className="rounded-lg bg-primary px-8 py-3 font-medium text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/30 inline-flex items-center justify-center gap-2 group"
+              className="rounded-lg bg-primary px-8 py-3 font-medium text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/30 hover:scale-105 inline-flex items-center justify-center gap-2 group animate-fade-in-up delay-500 active:scale-95"
             >
               Send Email
               <Mail className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -91,7 +91,7 @@ export function ContactSection() {
               href="https://github.com/vipulsajjanwar"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg border-2 border-primary px-8 py-3 font-medium text-primary transition-all hover:bg-primary/10 inline-flex items-center justify-center gap-2 group"
+              className="rounded-lg border-2 border-primary px-8 py-3 font-medium text-primary transition-all hover:bg-primary/10 hover:scale-105 inline-flex items-center justify-center gap-2 group animate-fade-in-up delay-600 active:scale-95"
             >
               Visit GitHub
               <ExternalLink className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
