@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export function HeroSection() {
   return (
@@ -17,7 +18,7 @@ export function HeroSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-3xl" />
 
       <div className="relative mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-2 lg:gap-16">
-        {/* Left Column - Identity */}
+        {/* Left Column - Identity and Bio */}
         <div className="flex flex-col justify-center">
           {/* Glassmorphism Card */}
           <div className="group relative p-8 rounded-2xl backdrop-blur-xl bg-card/30 border border-cyan-500/20 shadow-[0_0_30px_rgba(6,182,212,0.1)] transition-all duration-300 hover:border-cyan-500/50 hover:shadow-[0_0_40px_rgba(6,182,212,0.2)]">
@@ -36,7 +37,7 @@ export function HeroSection() {
             </p>
 
             {/* Navigation Links */}
-            <nav className="mt-12 flex flex-col gap-4">
+            <nav className="mt-8 flex flex-col gap-4">
               {[
                 { href: "#about", label: "About" },
                 { href: "#skills", label: "Skills" },
@@ -55,7 +56,7 @@ export function HeroSection() {
             </nav>
 
             {/* Social Links */}
-            <div className="mt-12 flex gap-5">
+            <div className="mt-8 flex gap-5">
               {[
                 { href: "https://github.com/vipulsajjanwar", label: "GitHub", icon: "github" },
                 { href: "https://www.linkedin.com/in/vipulsajjanwar07/", label: "LinkedIn", icon: "linkedin" },
@@ -73,46 +74,67 @@ export function HeroSection() {
                 </a>
               ))}
             </div>
+
+            {/* Bio section */}
+            <div className="mt-10 pt-8 border-t border-cyan-500/10 space-y-4">
+              <p className="text-base leading-relaxed text-muted-foreground">
+                {"I'm a meticulous and passionate "}
+                <span className="font-medium text-cyan-300">Test Automation Engineer</span>
+                {" with 7+ years of experience delivering high-quality, scalable automation frameworks."}
+              </p>
+              <p className="text-base leading-relaxed text-muted-foreground">
+                {"Expertise in "}
+                <span className="font-medium text-purple-300">Web, API, and Performance Testing</span>
+                {" with a growing interest in AI-driven testing strategies and autonomous agents."}
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Right Column - Bio */}
-        <div className="flex flex-col justify-center">
-          {/* Glassmorphism Card for Bio */}
-          <div className="group relative p-8 rounded-2xl backdrop-blur-xl bg-card/30 border border-purple-500/20 shadow-[0_0_30px_rgba(147,51,234,0.1)] transition-all duration-300 hover:border-purple-500/50 hover:shadow-[0_0_40px_rgba(147,51,234,0.2)]">
-            {/* Corner accents with hover animation */}
-            <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-cyan-500/40 rounded-tl-2xl transition-all duration-300 group-hover:w-16 group-hover:h-16 group-hover:border-cyan-400/70" />
-            <div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-purple-500/40 rounded-br-2xl transition-all duration-300 group-hover:w-16 group-hover:h-16 group-hover:border-purple-400/70" />
+        {/* Right Column - Portrait */}
+        <div className="flex flex-col justify-center items-center">
+          {/* Animated background glow behind portrait */}
+          <div className="absolute -right-20 top-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -z-10 animate-pulse" />
+          <div className="absolute -right-40 bottom-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl -z-10" style={{ animationDelay: '1.5s' }} />
+          
+          {/* Glassmorphism Portrait Container */}
+          <div className="group relative w-full max-w-sm">
+            {/* Glowing border container */}
+            <div className="absolute -inset-2 bg-gradient-to-br from-cyan-500/30 via-purple-500/20 to-blue-500/10 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
-            <div className="space-y-6 text-muted-foreground">
-              <p className="text-lg leading-relaxed">
-                {"I'm a meticulous and passionate "}
-                <span className="font-medium text-cyan-300">Test Automation Engineer</span>
-                {" with 7+ years of experience delivering high-quality, scalable automation frameworks. My expertise spans "}
-                <span className="font-medium text-purple-300">Web, API, and Performance Testing</span>
-                {", with a growing interest in AI-driven testing strategies and autonomous agents."}
-              </p>
-              <p className="text-lg leading-relaxed">
-                {"Currently enhancing legacy frameworks by integrating modern practices like "}
-                <span className="font-medium text-cyan-300">Selenium Grid</span>
-                {", "}
-                <span className="font-medium text-purple-300">Docker</span>
-                {", and "}
-                <span className="font-medium text-cyan-300">Jenkins</span>
-                {". I'm also exploring the use of AI agents for autonomous testing, self-healing test scripts, and dynamic data generation."}
-              </p>
-              <p className="text-lg leading-relaxed">
-                {"Building hybrid frameworks using "}
-                <span className="font-medium text-purple-300">Java</span>
-                {", "}
-                <span className="font-medium text-cyan-300">TestNG</span>
-                {", "}
-                <span className="font-medium text-purple-300">Maven</span>
-                {", and POM design. Deep experience in API & UI performance testing using JMeter, Postman, and Newman."}
-              </p>
-              <p className="text-lg leading-relaxed">
-                {"Clean code, modular design, and continuous optimization are my go-to principles. Integrating AI, analytics, and self-serve reporting into test pipelines for smarter debugging and traceability."}
-              </p>
+            {/* Main portrait card */}
+            <div className="relative p-2 rounded-3xl backdrop-blur-xl bg-gradient-to-br from-card/40 via-card/30 to-card/20 border border-cyan-500/30 shadow-[0_0_40px_rgba(6,182,212,0.15)]">
+              {/* Thin neon border accent */}
+              <div className="absolute inset-0 rounded-3xl border border-cyan-500/50 pointer-events-none" />
+              
+              {/* Corner accent - top left */}
+              <div className="absolute top-4 left-4 w-16 h-16 border-l-2 border-t-2 border-cyan-400/60 rounded-tl-3xl" />
+              
+              {/* Corner accent - bottom right */}
+              <div className="absolute bottom-4 right-4 w-16 h-16 border-r-2 border-b-2 border-purple-400/60 rounded-br-3xl" />
+              
+              {/* Portrait Image */}
+              <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
+                <Image
+                  src="/developer-portrait.png"
+                  alt="Vipul Sajjanwar - Professional Portrait"
+                  width={400}
+                  height={500}
+                  priority
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                  style={{ aspectRatio: '4/5' }}
+                />
+                
+                {/* Overlay gradient for depth */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+              
+              {/* Experience badge */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full backdrop-blur-lg bg-card/60 border border-cyan-500/40 text-center">
+                <p className="text-xs font-semibold text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text">
+                  7.5+ Years Automation Engineer
+                </p>
+              </div>
             </div>
           </div>
         </div>
